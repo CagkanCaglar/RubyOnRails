@@ -6,7 +6,7 @@
   <title>Ruby on Rails</title>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="script.js"></script>
-
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
   
@@ -346,5 +346,16 @@
 </div>
 
 </div>
+
+
+<script>
+  
+$(document).ready(function(){
+    $(".menu-icon").click(function(){
+      $(".mobil-menu-container").toggleClass("mobile-menu-show");
+    });
+  });
+
+</script>
 </body>
 </html>
