@@ -1,3 +1,8 @@
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+
+
 $(document).ready(function(){
     $(".menu-icon").click(function(){
       $(".mobil-menu-container").toggleClass("mobile-menu-show");
@@ -8,11 +13,10 @@ $(document).ready(function(){
     x.classList.toggle("change");
   }
 
-  const express = require('express');
-const app = express();
 
-app.get('/', function(request, response){
-    response.sendFile('index.html');
+  // save static files like images, scripts and css in `public`...
+app.use(express.static(__dirname + '/'))
+app.get("/", function (req, res) {
+  res.sendFile(__dirname+ "index.html");
 });
-  
-  
+
