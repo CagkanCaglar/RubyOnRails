@@ -14,9 +14,8 @@ $(document).ready(function(){
   }
 
 
-  // save static files like images, scripts and css in `public`...
-app.use(express.static(__dirname + '/'))
-app.get("/", function (req, res) {
-  res.sendFile(__dirname+ "index.html");
-});
+  app.use(express.static('./'));
 
+  app.get('/', function(req, res) { 
+      res.render('index.html');
+  });
