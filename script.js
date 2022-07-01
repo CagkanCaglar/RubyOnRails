@@ -33,7 +33,7 @@ app.get('/file', function(req, res) {
     console.log("GET the file");
     res
         .status(200)
-        .sendFile(path.join(__dirname, 'app.js'));
+        .sendFile(path.join(__dirname, 'script.js'));
 });
 
 
