@@ -16,19 +16,19 @@ var path = require('path');
 app.use(express.static(path.join(__dirname, '/')));
 
 
-app.get('/json', function(req, res) {
-    console.log("GET the json");
-    res
-        .status(200)
-        .json( {"jsonData" : true} );
-});
+// app.get('/json', function(req, res) {
+//     console.log("GET the json");
+//     res
+//         .status(200)
+//         .json( {"jsonData" : true} );
+// });
 
-app.get('/file', function(req, res) {
-    console.log("GET the file");
-    res
-        .status(200)
-        .sendFile(path.join(__dirname, 'script.js'));
-});
+// app.get('/file', function(req, res) {
+//     console.log("GET the file");
+//     res
+//         .status(200)
+//         .sendFile(path.join(__dirname, 'script.js'));
+// });
 
 
 
